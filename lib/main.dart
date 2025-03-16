@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mishra_ji/constants/theme/app_themes.dart';
+
+import 'presentation/widgets/bottom_nav_bar.dart';
 import 'package:mishra_ji/presentation/screens/onboarding_screen.dart';
 import 'package:mishra_ji/presentation/screens/splash_screen.dart';
 
@@ -16,6 +19,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Mishra Ji',
       debugShowCheckedModeBanner: false,
+      themeMode: ThemeMode.system,
+      theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
+      home: CustomBottomNavBar(),
       theme: ThemeData(
         primaryColor: const Color(0xFFFF8C37),
         colorScheme: ColorScheme.fromSeed(

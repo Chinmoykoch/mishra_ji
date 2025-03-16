@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mishra_ji/presentation/widgets/product_card.dart';
 import 'package:mishra_ji/presentation/widgets/store_card.dart';
-
 import '../widgets/searchbar_widget.dart';
 
 class ShopDetailsScreen extends StatelessWidget {
@@ -19,7 +18,12 @@ class ShopDetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+        leading: BackButton(
+          color: Theme.of(context).iconTheme.color,
+        ),
+      ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

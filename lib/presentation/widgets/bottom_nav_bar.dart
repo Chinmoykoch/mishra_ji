@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mishra_ji/constants/colors.dart';
+import 'package:mishra_ji/features/categories/screens/categories_screen.dart';
+import 'package:mishra_ji/features/wishlists/screens/wishlists.dart';
 import 'package:mishra_ji/presentation/screens/profile.dart';
 
 import '../screens/home_screen.dart';
@@ -13,6 +16,10 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
 
   final List<Widget> _screens = [
     const HomeScreen(),
+    const CategoriesScreen(),
+    const Center(child: Text("cart", style: TextStyle(fontSize: 20))),
+    const WishlistsScreen(),
+    const Center(child: Text("Profile Screen", style: TextStyle(fontSize: 20))),
     const Center(
         child: Text("Categories Screen", style: TextStyle(fontSize: 20))),
     const Center(child: Text("My Cart Screen", style: TextStyle(fontSize: 20))),
@@ -35,29 +42,37 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
         type: BottomNavigationBarType.fixed,
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
+        selectedItemColor: AppColors.buttonPrimary,
+        unselectedItemColor: AppColors.darkBorder,
         selectedItemColor: Colors.blueAccent,
         unselectedItemColor: Colors.grey,
         showSelectedLabels: true,
         showUnselectedLabels: true,
-        items: const [
+        selectedLabelStyle: const TextStyle(fontWeight: FontWeight.bold),
+        items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home_outlined),
+            icon: const Icon(Icons.home_outlined),
+            activeIcon: const Icon(Icons.home),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.grid_view),
+            icon: const Icon(Icons.grid_view_outlined),
+            activeIcon: const Icon(Icons.grid_view_rounded),
             label: 'Categories',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart_outlined),
+            icon: const Icon(Icons.shopping_cart_outlined),
+            activeIcon: const Icon(Icons.shopping_cart),
             label: 'My Cart',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.favorite_border),
+            icon: const Icon(Icons.favorite_border),
+            activeIcon: const Icon(Icons.favorite),
             label: 'Wishlist',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person_outline),
+            icon: const Icon(Icons.person_outline),
+            activeIcon: const Icon(Icons.person),
             label: 'Profile',
           ),
         ],

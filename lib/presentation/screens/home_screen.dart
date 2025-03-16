@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mishra_ji/constants/colors.dart';
 import 'package:mishra_ji/presentation/screens/shop_details_screen.dart';
 import 'package:mishra_ji/presentation/widgets/category_scroll_card.dart';
 import 'package:mishra_ji/presentation/widgets/store_card.dart';
@@ -17,18 +18,40 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: const Icon(Icons.location_on_outlined),
-        title: const Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+        title: Row(
           children: [
-            Text(
-              "Home",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
+            Icon(
+              Icons.location_on_outlined,
+              color: Theme.of(context).iconTheme.color,
             ),
-            Text(
-              "Hyderabad",
-              style: TextStyle(fontSize: 12),
-            )
+            const SizedBox(width: 20),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "Home",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 17,
+                    color: Theme.of(context)
+                        .textTheme
+                        .bodyLarge
+                        ?.color, // Adapts to theme
+                  ),
+                ),
+                Text(
+                  "Hyderabad",
+                  style: TextStyle(
+                    fontSize: 12,
+                    color: Theme.of(context)
+                        .textTheme
+                        .bodyMedium
+                        ?.color, // Adapts to theme
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),

@@ -5,24 +5,45 @@ class SearchBarWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final isDarkMode = theme.brightness == Brightness.dark;
+    final double screenWidth = MediaQuery.of(context).size.width;
+
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16.0),
       child: Container(
+        width: screenWidth * 0.9,
+        height: 50,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(30),
-          border: Border.all(color: Colors.black, width: 1),
+          border: Border.all(
+            color: isDarkMode ? Colors.white70 : Colors.black,
+            width: 1,
+          ),
+          color: isDarkMode ? Colors.grey.shade900 : Colors.white,
         ),
-        child: TextField(
-          decoration: InputDecoration(
-            prefixIcon:
-                const Icon(Icons.tune, color: Colors.grey), // Filter icon
-            hintText: "Search",
-            hintStyle: const TextStyle(color: Colors.grey),
-            suffixIcon:
-                const Icon(Icons.search, color: Colors.grey), // Search icon
-            border: InputBorder.none,
-            contentPadding:
-                const EdgeInsets.symmetric(vertical: 12, horizontal: 16),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Row(
+                children: [
+                  Icon(Icons.tune,
+                      color: isDarkMode ? Colors.white70 : Colors.grey),
+                  const SizedBox(width: 20),
+                  Text(
+                    "Search",
+                    style: TextStyle(
+                      color: isDarkMode ? Colors.white70 : Colors.black87,
+                      fontSize: 16,
+                    ),
+                  ),
+                ],
+              ),
+              Icon(Icons.search,
+                  color: isDarkMode ? Colors.white70 : Colors.grey),
+            ],
           ),
         ),
       ),
