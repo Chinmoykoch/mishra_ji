@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 // Light theme app bar
-final AppBarTheme appBarTheme = AppBarTheme(
+const AppBarTheme appBarTheme = AppBarTheme(
   backgroundColor: Color(0xFFF57C00), // Deep Orange
   elevation: 0,
   centerTitle: true,
@@ -15,7 +15,7 @@ final AppBarTheme appBarTheme = AppBarTheme(
 );
 
 // Dark theme app bar (slightly darker orange)
-final AppBarTheme darkAppBarTheme = AppBarTheme(
+const AppBarTheme darkAppBarTheme = AppBarTheme(
   backgroundColor: Color(0xFFE65100), // Darker Orange for dark theme
   elevation: 0,
   centerTitle: true,
@@ -36,10 +36,10 @@ class AppBarBuilder {
     required Function(String) onTitleChanged,
   }) {
     return AppBar(
-      backgroundColor: Color(0xFFF57C00),
+      backgroundColor: const Color(0xFFF57C00),
       automaticallyImplyLeading: false,
       leading: IconButton(
-        icon: Icon(Icons.menu, color: Colors.white),
+        icon: const Icon(Icons.menu, color: Colors.white),
         onPressed: () {},
       ),
       title: EditableAppBarTitle(
@@ -52,7 +52,7 @@ class AppBarBuilder {
           padding: const EdgeInsets.only(right: 12.0),
           child: CircleAvatar(
             backgroundColor: Colors.white.withAlpha(77),
-            child: Icon(Icons.person, color: Colors.white),
+            child: const Icon(Icons.person, color: Colors.white),
           ),
         ),
       ],
@@ -66,10 +66,10 @@ class AppBarBuilder {
     required VoidCallback onBackPressed,
   }) {
     return AppBar(
-      backgroundColor: Color(0xFFF57C00),
+      backgroundColor: const Color(0xFFF57C00),
       automaticallyImplyLeading: false,
       leading: IconButton(
-        icon: Icon(Icons.arrow_back, color: Colors.white),
+        icon: const Icon(Icons.arrow_back, color: Colors.white),
         onPressed: onBackPressed,
       ),
       title: EditableAppBarTitle(
@@ -82,7 +82,7 @@ class AppBarBuilder {
           padding: const EdgeInsets.only(right: 12.0),
           child: CircleAvatar(
             backgroundColor: Colors.white.withAlpha(77),
-            child: Icon(Icons.person, color: Colors.white),
+            child: const Icon(Icons.person, color: Colors.white),
           ),
         ),
       ],
@@ -126,8 +126,8 @@ class _EditableAppBarTitleState extends State<EditableAppBarTitle> {
     return _isEditing
         ? TextField(
             controller: _controller,
-            style: TextStyle(color: Colors.white, fontSize: 18),
-            decoration: InputDecoration(
+            style: const TextStyle(color: Colors.white, fontSize: 18),
+            decoration: const InputDecoration(
               border: InputBorder.none,
               contentPadding: EdgeInsets.zero,
             ),
@@ -147,7 +147,7 @@ class _EditableAppBarTitleState extends State<EditableAppBarTitle> {
             },
             child: Text(
               _controller.text,
-              style: TextStyle(color: Colors.white, fontSize: 18),
+              style: const TextStyle(color: Colors.white, fontSize: 18),
             ),
           );
   }

@@ -17,7 +17,7 @@ final InputDecorationTheme inputDecorationTheme = InputDecorationTheme(
   ),
   focusedBorder: OutlineInputBorder(
     borderRadius: BorderRadius.circular(25),
-    borderSide: BorderSide(color: Colors.orange, width: 1.0),
+    borderSide: const BorderSide(color: Colors.orange, width: 1.0),
   ),
 
   // Error state styling
@@ -36,7 +36,7 @@ final InputDecorationTheme inputDecorationTheme = InputDecorationTheme(
   ),
 
   // Content padding - more compact to match app
-  contentPadding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+  contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
 
   // Text styling
   hintStyle: TextStyle(
@@ -57,7 +57,7 @@ final InputDecorationTheme inputDecorationTheme = InputDecorationTheme(
 
   // Floating label behavior
   floatingLabelBehavior: FloatingLabelBehavior.auto,
-  floatingLabelStyle: TextStyle(
+  floatingLabelStyle: const TextStyle(
     color: Colors.orange,
     fontWeight: FontWeight.w500,
   ),
@@ -67,7 +67,7 @@ final InputDecorationTheme inputDecorationTheme = InputDecorationTheme(
 final InputDecorationTheme darkInputDecorationTheme = InputDecorationTheme(
   // Text field general styling
   filled: true,
-  fillColor: Color(0xFF121212), // True black background
+  fillColor: const Color(0xFF121212), // True black background
 
   // Border styling - rounded with distinct outline
   border: OutlineInputBorder(
@@ -80,7 +80,7 @@ final InputDecorationTheme darkInputDecorationTheme = InputDecorationTheme(
   ),
   focusedBorder: OutlineInputBorder(
     borderRadius: BorderRadius.circular(25),
-    borderSide: BorderSide(color: Colors.orange, width: 1.0),
+    borderSide: const BorderSide(color: Colors.orange, width: 1.0),
   ),
 
   // Error state styling
@@ -99,7 +99,7 @@ final InputDecorationTheme darkInputDecorationTheme = InputDecorationTheme(
   ),
 
   // Content padding - more compact to match app
-  contentPadding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+  contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
 
   // Text styling
   hintStyle: TextStyle(
@@ -120,7 +120,7 @@ final InputDecorationTheme darkInputDecorationTheme = InputDecorationTheme(
 
   // Floating label behavior
   floatingLabelBehavior: FloatingLabelBehavior.auto,
-  floatingLabelStyle: TextStyle(
+  floatingLabelStyle: const TextStyle(
     color: Colors.orange,
     fontWeight: FontWeight.w500,
   ),

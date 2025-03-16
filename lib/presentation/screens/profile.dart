@@ -8,6 +8,8 @@ import 'package:mishra_ji/presentation/widgets/profile-widgets/prev_btn.dart';
 import 'package:mishra_ji/presentation/widgets/profile-widgets/profile_navs.dart';
 
 class Profile extends StatelessWidget{
+  const Profile({super.key});
+
 
   @override
   Widget build(BuildContext context) {
@@ -18,11 +20,11 @@ class Profile extends StatelessWidget{
       backgroundColor: Colors.white,
       elevation: 0, 
       automaticallyImplyLeading: false,
-      leading: Padding(
+      leading: const Padding(
         padding: EdgeInsets.only(left: 16),
         child: PrevBtn(),
       ),
-      title: Text(
+      title: const Text(
         "My Profile",
         style: TextStyle(
           fontSize: 20, 
@@ -30,7 +32,7 @@ class Profile extends StatelessWidget{
           color: Colors.black
         ),
       ),
-      actions: [
+      actions: const [
         Padding(
           padding: EdgeInsets.only(right: 16), // Align with UI
           child: OptionsBtn(),
@@ -41,7 +43,7 @@ class Profile extends StatelessWidget{
 
       body: SingleChildScrollView(
         child: Container(
-          margin: EdgeInsets.all(30),
+          margin: const EdgeInsets.all(30),
           child: Column(
             children: [
               Row(
@@ -50,11 +52,11 @@ class Profile extends StatelessWidget{
                     radius: 50,
                     child: ClipOval(child: Image.asset('assets/images/profileimg.png'))
                   ),
-                  Spacer(),
+                  const Spacer(),
                   Column(
                     children: [
                       Headtext(title: "Samantha Josh"),
-                      Text("samantha.josh@gmail.com")
+                      const Text("samantha.josh@gmail.com")
                     ],
                   ),
                   
@@ -63,34 +65,34 @@ class Profile extends StatelessWidget{
               ),
         
               //profile nav items
-              SizedBox(height: 20,),
+              const SizedBox(height: 20,),
 
               GestureDetector(
                 onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Orders()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> Orders()));
                 },
                 child: ProfileNavs(mainTitle: "My Orders", description: "Already 7 orders placed")),
-              Divider(thickness: 1,),
+              const Divider(thickness: 1,),
               ProfileNavs(mainTitle: "Shipping Address", description: "You have a single address"),
-              Divider(thickness: 1,),
+              const Divider(thickness: 1,),
               ProfileNavs(mainTitle: "Wallets & Payments", description: "Already 7 orders placed"),
-              Divider(thickness: 1,),
+              const Divider(thickness: 1,),
 
               GestureDetector(
                 onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Coupons()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const Coupons()));
                 },
                 child: ProfileNavs(mainTitle: "My Coupons", description: "2 active coupons")),
-              Divider(thickness: 1,),
+              const Divider(thickness: 1,),
               ProfileNavs(mainTitle: "My Reviews", description: "Reviews for 5 items"),
-              Divider(thickness: 1,),
+              const Divider(thickness: 1,),
 
               GestureDetector(
                 onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Settings()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const Settings()));
                 },
                 child: ProfileNavs(mainTitle: "Settings", description: "Notifications, Password")),
-              Divider(thickness: 1,),
+              const Divider(thickness: 1,),
             ],
           ),
         ),

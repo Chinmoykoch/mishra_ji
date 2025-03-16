@@ -7,7 +7,7 @@ class Headtext extends StatelessWidget{
   double ?fontsize;
   FontWeight ?fontWeight;
 
-  Headtext({
+  Headtext({super.key, 
     required this.title,
     this.textcol,
     this.fontWeight = FontWeight.w700,

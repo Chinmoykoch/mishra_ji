@@ -8,13 +8,13 @@ class PastOrdersWidget extends StatelessWidget {
   final Color statusColor;
   
   const PastOrdersWidget({
-    Key? key,
+    super.key,
     required this.imageUrls,
     required this.price,
     required this.status,
     this.deliveryDate,
     required this.statusColor,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -73,7 +73,7 @@ class PastOrdersWidget extends StatelessWidget {
                 deliveryDate != null ? "Order Delivered at\n$deliveryDate" : "Order Picked Up",
                 style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
               ),
-              Spacer(),
+              const Spacer(),
               Icon(Icons.circle, color: statusColor, size: 12),
               const SizedBox(width: 6),
               Text(

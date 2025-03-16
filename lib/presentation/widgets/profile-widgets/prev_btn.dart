@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:mishra_ji/presentation/screens/home_screen.dart';
 
 class PrevBtn extends StatelessWidget {
+  const PrevBtn({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -13,9 +14,9 @@ class PrevBtn extends StatelessWidget {
         border: Border.all(color: Colors.black38, width: 1), // Light border
       ),
       child: IconButton(
-        icon: Icon(Icons.chevron_left, size: 20, color: Colors.black), // Smaller icon
+        icon: const Icon(Icons.chevron_left, size: 20, color: Colors.black), // Smaller icon
         padding: EdgeInsets.zero, // Remove extra padding
-        constraints: BoxConstraints(),
+        constraints: const BoxConstraints(),
         onPressed: () {
          Navigator.pop(context);
         },

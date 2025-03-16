@@ -12,7 +12,7 @@ class OrderDetailsScreen extends StatelessWidget {
   final double billTotal;
 
   const OrderDetailsScreen({
-    Key? key,
+    super.key,
     required this.itemName,
     required this.itemImage,
     required this.itemPrice,
@@ -21,7 +21,7 @@ class OrderDetailsScreen extends StatelessWidget {
     required this.discount,
     required this.tax,
     required this.billTotal,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -31,11 +31,11 @@ class OrderDetailsScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         elevation: 0,
         automaticallyImplyLeading: false,
-        leading: Padding(
+        leading: const Padding(
           padding: EdgeInsets.only(left: 16),
           child: PrevBtn(),
         ),
-        title: Text(
+        title: const Text(
           "Order ID",
           style: TextStyle(
             fontSize: 20,
@@ -51,7 +51,7 @@ class OrderDetailsScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // Order Info
-            Text(
+            const Text(
               "Order Delivered on",
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
             ),

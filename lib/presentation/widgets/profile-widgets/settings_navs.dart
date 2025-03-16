@@ -6,7 +6,7 @@ class SettingsNavs extends StatelessWidget{
   final String title;
   final Widget? trailingWidget; // New widget option
 
-  SettingsNavs({
+  const SettingsNavs({super.key, 
     required this.icon,
     required this.title,
     this.trailingWidget,
@@ -19,14 +19,14 @@ class SettingsNavs extends StatelessWidget{
       color: Colors.white,
       borderRadius: BorderRadius.circular(15),
       child: Container(
-        padding: EdgeInsets.symmetric(vertical: 20, horizontal: 8),
+        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 8),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Row(
               children: [
                 icon,
-                SizedBox(width: 15),
+                const SizedBox(width: 15),
                 Headtext(title: title),
               ],
             ),

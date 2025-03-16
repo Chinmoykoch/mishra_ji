@@ -16,8 +16,8 @@ class AppButtonStyles {
     backgroundColor: activeBlack,
     foregroundColor: white,
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
-    padding: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-    textStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
+    padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+    textStyle: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
     elevation: 0,
   );
 
@@ -25,8 +25,8 @@ class AppButtonStyles {
     backgroundColor: inactiveGray,
     foregroundColor: Colors.black54,
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
-    padding: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-    textStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
+    padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+    textStyle: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
     elevation: 0,
   );
 
@@ -35,9 +35,9 @@ class AppButtonStyles {
     backgroundColor: activeBlack,
     foregroundColor: white,
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-    padding: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-    textStyle: TextStyle(fontSize: 12, fontWeight: FontWeight.w600),
-    minimumSize: Size(100, 35),
+    padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+    textStyle: const TextStyle(fontSize: 12, fontWeight: FontWeight.w600),
+    minimumSize: const Size(100, 35),
   );
 
   // Buy coupons button (red button at bottom of first screen)
@@ -45,23 +45,23 @@ class AppButtonStyles {
     backgroundColor: red,
     foregroundColor: white,
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
-    padding: EdgeInsets.symmetric(vertical: 12, horizontal: 20),
-    textStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
-    minimumSize: Size(double.infinity, 45),
+    padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 20),
+    textStyle: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
+    minimumSize: const Size(double.infinity, 45),
   );
 
   // Login button (outlined button in second screen)
   static final ButtonStyle loginButton = OutlinedButton.styleFrom(
     foregroundColor: Colors.black87,
-    side: BorderSide(color: Colors.black12),
+    side: const BorderSide(color: Colors.black12),
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-    padding: EdgeInsets.symmetric(vertical: 12, horizontal: 24),
-    textStyle: TextStyle(
+    padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 24),
+    textStyle: const TextStyle(
       fontSize: 16,
       fontWeight: FontWeight.w500,
       color: Colors.black87,
     ),
-    minimumSize: Size(120, 45),
+    minimumSize: const Size(120, 45),
   );
 
   // Get Started/Next button (orange button in second and third screens)
@@ -69,16 +69,16 @@ class AppButtonStyles {
     backgroundColor: primaryOrange,
     foregroundColor: white,
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-    padding: EdgeInsets.symmetric(vertical: 12, horizontal: 24),
-    textStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
-    minimumSize: Size(120, 45),
+    padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 24),
+    textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+    minimumSize: const Size(120, 45),
   );
 
   // Skip button (text button in second and third screens)
   static final ButtonStyle skipButton = TextButton.styleFrom(
     foregroundColor: Colors.blue,
-    textStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
-    padding: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+    textStyle: const TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
+    padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
   );
 
   // Order/Payment button (orange wide button in Categories and Checkout screens)
@@ -86,9 +86,9 @@ class AppButtonStyles {
     backgroundColor: primaryOrange,
     foregroundColor: white,
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-    padding: EdgeInsets.symmetric(vertical: 15, horizontal: 24),
-    textStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
-    minimumSize: Size(double.infinity, 50),
+    padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 24),
+    textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+    minimumSize: const Size(double.infinity, 50),
   );
 
   // Scan & Pay button (orange wide button in UPI Payment screen)
@@ -96,9 +96,9 @@ class AppButtonStyles {
     backgroundColor: primaryOrange,
     foregroundColor: white,
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-    padding: EdgeInsets.symmetric(vertical: 15, horizontal: 24),
-    textStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
-    minimumSize: Size(double.infinity, 50),
+    padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 24),
+    textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+    minimumSize: const Size(double.infinity, 50),
   );
 
   // Cancel button (red wide button in UPI Payment screen)
@@ -106,26 +106,26 @@ class AppButtonStyles {
     backgroundColor: red,
     foregroundColor: white,
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-    padding: EdgeInsets.symmetric(vertical: 15, horizontal: 24),
-    textStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
-    minimumSize: Size(double.infinity, 50),
+    padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 24),
+    textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+    minimumSize: const Size(double.infinity, 50),
   );
 
   // Add Location/Add Card button (text button with green text in Checkout screen)
   static final ButtonStyle addActionButton = TextButton.styleFrom(
     foregroundColor: green,
-    textStyle: TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
-    padding: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+    textStyle: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
+    padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
   );
 
   // Category card button (dark outlined rounded cards from Categories screen)
   static final ButtonStyle categoryCardButton = OutlinedButton.styleFrom(
     foregroundColor: white,
     backgroundColor: Colors.transparent,
-    side: BorderSide(color: Colors.white24),
+    side: const BorderSide(color: Colors.white24),
     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-    padding: EdgeInsets.symmetric(vertical: 12, horizontal: 12),
-    textStyle: TextStyle(
+    padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
+    textStyle: const TextStyle(
       fontSize: 14,
       fontWeight: FontWeight.w500,
       color: white,
@@ -143,6 +143,6 @@ class AppButtonStyles {
   static final ButtonStyle radioSelectionButton = IconButton.styleFrom(
     foregroundColor: primaryOrange,
     backgroundColor: Colors.transparent,
-    shape: CircleBorder(side: BorderSide(color: primaryOrange)),
+    shape: const CircleBorder(side: BorderSide(color: primaryOrange)),
   );
 }
