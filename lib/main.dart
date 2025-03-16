@@ -1,4 +1,3 @@
-// lib/main.dart
 import 'package:flutter/material.dart';
 import 'package:mishra_ji/presentation/screens/onboarding_screen.dart';
 import 'package:mishra_ji/presentation/screens/splash_screen.dart';
@@ -12,7 +11,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Mishra Ji',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
@@ -22,6 +23,10 @@ class MyApp extends StatelessWidget {
           primary: const Color(0xFFFF8C37),
         ),
         fontFamily: 'Poppins',
+        fontFamily: 'PlusJakartaSans',
+        scaffoldBackgroundColor: Colors.white,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
       ),
       initialRoute: '/',
       routes: {

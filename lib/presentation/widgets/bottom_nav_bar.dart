@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mishra_ji/presentation/screens/profile.dart';
 
 import '../screens/home_screen.dart';
 
@@ -17,7 +18,7 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
     const Center(child: Text("My Cart Screen", style: TextStyle(fontSize: 20))),
     const Center(
         child: Text("Wishlist Screen", style: TextStyle(fontSize: 20))),
-    const Center(child: Text("Profile Screen", style: TextStyle(fontSize: 20))),
+    Profile()
   ];
 
   void _onItemTapped(int index) {
