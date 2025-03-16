@@ -25,7 +25,7 @@ class ProfileNavs extends StatelessWidget{
             ],
           ),
           Spacer(),
-          Icon(Icons.chevron_right)
+          Icon(Icons.chevron_right, color: Colors.grey, size: 35,)
         ],
       ),
     );

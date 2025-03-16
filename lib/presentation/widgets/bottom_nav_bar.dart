@@ -35,7 +35,7 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
         type: BottomNavigationBarType.fixed,
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
-        selectedItemColor: Colors.black,
+        selectedItemColor: Colors.blueAccent,
         unselectedItemColor: Colors.grey,
         showSelectedLabels: true,
         showUnselectedLabels: true,
