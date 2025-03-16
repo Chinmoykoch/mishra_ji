@@ -32,7 +32,8 @@ class AppTheme {
       style: AppButtonStyles.loginButton,
     ),
     textButtonTheme: TextButtonThemeData(style: AppButtonStyles.skipButton),
-    appBarTheme: darkAppBarTheme, // Use the dark app bar theme
-    inputDecorationTheme: inputDecorationTheme,
+    appBarTheme: darkAppBarTheme,
+    inputDecorationTheme:
+        darkInputDecorationTheme, // Use the dark app bar theme
   );
 }
