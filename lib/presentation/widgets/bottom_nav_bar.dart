@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mishra_ji/constants/colors.dart';
 import 'package:mishra_ji/features/categories/screens/categories_screen.dart';
 import 'package:mishra_ji/features/wishlists/screens/wishlists.dart';
+import 'package:mishra_ji/presentation/screens/profile.dart';
 
 import '../screens/home_screen.dart';
 
@@ -19,6 +20,12 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
     const Center(child: Text("cart", style: TextStyle(fontSize: 20))),
     const WishlistsScreen(),
     const Center(child: Text("Profile Screen", style: TextStyle(fontSize: 20))),
+    const Center(
+        child: Text("Categories Screen", style: TextStyle(fontSize: 20))),
+    const Center(child: Text("My Cart Screen", style: TextStyle(fontSize: 20))),
+    const Center(
+        child: Text("Wishlist Screen", style: TextStyle(fontSize: 20))),
+    Profile()
   ];
 
   void _onItemTapped(int index) {
@@ -37,6 +44,8 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
         onTap: _onItemTapped,
         selectedItemColor: AppColors.buttonPrimary,
         unselectedItemColor: AppColors.darkBorder,
+        selectedItemColor: Colors.blueAccent,
+        unselectedItemColor: Colors.grey,
         showSelectedLabels: true,
         showUnselectedLabels: true,
         selectedLabelStyle: const TextStyle(fontWeight: FontWeight.bold),
