@@ -6,6 +6,8 @@ import 'package:mishra_ji/presentation/widgets/profile-widgets/prev_btn.dart';
 import 'package:mishra_ji/presentation/widgets/profile-widgets/settings_navs.dart';
 
 class Settings extends StatefulWidget {
+  const Settings({super.key});
+
   @override
   _SettingsState createState() => _SettingsState();
 }
@@ -31,11 +33,11 @@ class _SettingsState extends State<Settings> {
         backgroundColor: Colors.white,
         elevation: 0,
         automaticallyImplyLeading: false,
-        leading: Padding(
+        leading: const Padding(
           padding: EdgeInsets.only(left: 16),
           child: PrevBtn(),
         ),
-        title: Text(
+        title: const Text(
           "Settings",
           style: TextStyle(
             fontSize: 20,
@@ -43,7 +45,7 @@ class _SettingsState extends State<Settings> {
             color: Colors.black,
           ),
         ),
-        actions: [
+        actions: const [
           Icon(Icons.notifications_outlined),
           SizedBox(width: 8),
           Icon(Icons.language),
@@ -54,7 +56,7 @@ class _SettingsState extends State<Settings> {
         child: Column(
           children: [
             Container(
-              margin: EdgeInsets.all(30),
+              margin: const EdgeInsets.all(30),
               child: Column(
                 children: [
                   Center(
@@ -87,7 +89,7 @@ class _SettingsState extends State<Settings> {
                             bottom: 0,
                             child: GestureDetector(
                               onTap: _pickImage,
-                              child: CircleAvatar(
+                              child: const CircleAvatar(
                                 backgroundColor: Colors.black,
                                 radius: 20,
                                 child: Icon(
@@ -102,27 +104,27 @@ class _SettingsState extends State<Settings> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 15),
+                  const SizedBox(height: 15),
                   Headtext(title: "Samantha Josh"),
-                  Text("New Delhi, India"),
-                  SizedBox(height: 30),
+                  const Text("New Delhi, India"),
+                  const SizedBox(height: 30),
                 ],
               ),
             ),
             Container(
-              padding: EdgeInsets.only(right: 30, left: 30, top: 50, bottom: 15),
-              decoration: BoxDecoration(
+              padding: const EdgeInsets.only(right: 30, left: 30, top: 50, bottom: 15),
+              decoration: const BoxDecoration(
                 color: Color(0xFFF9F9F9),
                 borderRadius: BorderRadius.only(topLeft: Radius.circular(60), topRight: Radius.circular(60)),
               ),
               child: Column(
                 children: [
-                  SettingsNavs(icon: Icon(Icons.person, color: Colors.grey), title: "Edit Profile"),
-                  SizedBox(height: 15),
-                  SettingsNavs(icon: Icon(Icons.lock_outline, color: Colors.grey), title: "Change Password"),
-                  SizedBox(height: 15),
+                  const SettingsNavs(icon: Icon(Icons.person, color: Colors.grey), title: "Edit Profile"),
+                  const SizedBox(height: 15),
+                  const SettingsNavs(icon: Icon(Icons.lock_outline, color: Colors.grey), title: "Change Password"),
+                  const SizedBox(height: 15),
                   SettingsNavs(
-                    icon: Icon(Icons.notifications_outlined, color: Colors.grey), 
+                    icon: const Icon(Icons.notifications_outlined, color: Colors.grey), 
                     title: "Notifications",
                     trailingWidget: Switch(
                       activeColor: Colors.red,
@@ -134,22 +136,22 @@ class _SettingsState extends State<Settings> {
                       },
                     ),
                   ),
-                  SizedBox(height: 15),
-                  SettingsNavs(icon: Icon(Icons.pin_drop_outlined, color: Colors.grey), title: "My Location"),
-                  SizedBox(height: 15),
-                  SettingsNavs(icon: Icon(Icons.logout_outlined, color: Colors.red), title: "Logout"),
-                  SizedBox(height: 35),
+                  const SizedBox(height: 15),
+                  const SettingsNavs(icon: Icon(Icons.pin_drop_outlined, color: Colors.grey), title: "My Location"),
+                  const SizedBox(height: 15),
+                  const SettingsNavs(icon: Icon(Icons.logout_outlined, color: Colors.red), title: "Logout"),
+                  const SizedBox(height: 35),
 
                   SizedBox(
                     height: 50,
                     width: 150,
                     child: Container(
-                      padding: EdgeInsets.all(10),
+                      padding: const EdgeInsets.all(10),
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(10)
                       ),
-                      child: Row(
+                      child: const Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Icon(Icons.question_mark_outlined, ),

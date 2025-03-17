@@ -8,22 +8,22 @@ class CouponCardActive extends StatelessWidget {
   final Color topColor;
 
   const CouponCardActive({
-    Key? key,
+    super.key,
     required this.img,
     required this.couponName,
     required this.discount,
     required this.validity,
     this.topColor = Colors.teal,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(10),
+      margin: const EdgeInsets.all(10),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(15),
-        boxShadow: [
+        boxShadow: const [
           BoxShadow(
             color: Colors.black12,
             blurRadius: 10,
@@ -35,10 +35,10 @@ class CouponCardActive extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             decoration: BoxDecoration(
               color: topColor,
-              borderRadius: BorderRadius.only(
+              borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(15),
                 topRight: Radius.circular(15),
               ),
@@ -52,10 +52,10 @@ class CouponCardActive extends StatelessWidget {
                   width: 60,
                   fit: BoxFit.cover,
                 ),
-                SizedBox(width: 10,),
+                const SizedBox(width: 10,),
                 Text(
                   couponName,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
@@ -65,7 +65,7 @@ class CouponCardActive extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: EdgeInsets.all(15),
+            padding: const EdgeInsets.all(15),
             child: Row(
               children: [
                 Column(
@@ -73,25 +73,25 @@ class CouponCardActive extends StatelessWidget {
                   children: [
                     Text(
                       discount,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 22,
                         fontWeight: FontWeight.w900,
                         color: Colors.red,
                       ),
                     ),
-                    SizedBox(height: 5),
+                    const SizedBox(height: 5),
                     Text(
                       validity,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 14,
                         color: Colors.grey,
                       ),
                     ),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     
                   ],
                 ),
-                Spacer(),
+                const Spacer(),
                 ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.black,
@@ -100,7 +100,7 @@ class CouponCardActive extends StatelessWidget {
                         ),
                       ),
                       onPressed: () {},
-                      child: Text(
+                      child: const Text(
                         "SHOP NOW",
                         style: TextStyle(color: Colors.white),
                       ),

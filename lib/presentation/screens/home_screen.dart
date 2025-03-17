@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mishra_ji/constants/colors.dart';
 import 'package:mishra_ji/presentation/screens/shop_details_screen.dart';
 import 'package:mishra_ji/presentation/widgets/category_scroll_card.dart';
 import 'package:mishra_ji/presentation/widgets/store_card.dart';
@@ -122,7 +121,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => ShopDetailsScreen(
+                          builder: (context) => const ShopDetailsScreen(
                             shopName: "Mishra Ji - Hyderabad",
                             time: "5-10",
                             price: "60.00",

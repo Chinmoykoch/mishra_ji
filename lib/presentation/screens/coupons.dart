@@ -4,6 +4,8 @@ import 'package:mishra_ji/presentation/widgets/profile-widgets/coupon_card_expir
 import 'package:mishra_ji/presentation/widgets/profile-widgets/prev_btn.dart';
 
 class Coupons extends StatefulWidget {
+  const Coupons({super.key});
+
   @override
   _CouponsState createState() => _CouponsState();
 }
@@ -19,11 +21,11 @@ class _CouponsState extends State<Coupons> {
         backgroundColor: Colors.white,
         elevation: 0,
         automaticallyImplyLeading: false,
-        leading: Padding(
+        leading: const Padding(
           padding: EdgeInsets.only(left: 16),
           child: PrevBtn(),
         ),
-        title: Text(
+        title: const Text(
           "Coupons",
           style: TextStyle(
             fontSize: 20,
@@ -35,34 +37,34 @@ class _CouponsState extends State<Coupons> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(height: 40),
+            const SizedBox(height: 40),
             Container(
               decoration: BoxDecoration(
                 color: Colors.black12,
                 borderRadius: BorderRadius.circular(30),
               ),
-              padding: EdgeInsets.all(15),
-              margin: EdgeInsets.symmetric(horizontal: 25),
+              padding: const EdgeInsets.all(15),
+              margin: const EdgeInsets.symmetric(horizontal: 25),
               child: Row(
                 children: [
                   _buildToggleButton("Active", true),
-                  SizedBox(width: 8),
+                  const SizedBox(width: 8),
                   _buildToggleButton("Expired", false),
                 ],
               ),
             ),
             Container(
-              margin: EdgeInsets.all(25),
+              margin: const EdgeInsets.all(25),
               child: Column(
                 children: isActive
                     ? [ // Show active coupons
-                        CouponCardActive(
+                        const CouponCardActive(
                           img: "assets/images/coupon.png",
                           couponName: "BUY2GET1",
                           discount: "50% OFF",
                           validity: "Valid for only 4 days",
                         ),
-                        CouponCardActive(
+                        const CouponCardActive(
                           img: "assets/images/coupon.png",
                           couponName: "FASHION20",
                           discount: "50% OFF",
@@ -71,13 +73,13 @@ class _CouponsState extends State<Coupons> {
                         ),
                       ]
                     : [ // Show expired coupons
-                        CouponCardExpired(
+                        const CouponCardExpired(
                           img: "assets/images/coupon.png",
                           couponName: "SUMMER10",
                           discount: "10% OFF",
                           validity: "Expired on March 10",
                         ),
-                        CouponCardExpired(
+                        const CouponCardExpired(
                           img: "assets/images/coupon.png",
                           couponName: "WINTER50",
                           discount: "50% OFF",
@@ -102,7 +104,7 @@ class _CouponsState extends State<Coupons> {
         },
         child: Container(
           alignment: Alignment.center,
-          padding: EdgeInsets.symmetric(vertical: 12),
+          padding: const EdgeInsets.symmetric(vertical: 12),
           decoration: BoxDecoration(
             color: isActive == isSelected ? Colors.black : Colors.white,
             borderRadius: BorderRadius.circular(30),

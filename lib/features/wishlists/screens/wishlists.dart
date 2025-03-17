@@ -147,7 +147,7 @@ class WishlistsItem extends StatelessWidget {
                     ),
                     GestureDetector(
                         onTap: () {},
-                        child: Icon(
+                        child: const Icon(
                           Icons.add_circle_outline,
                           size: 30,
                           color: AppColors.buttonPrimary,
@@ -162,12 +162,12 @@ class WishlistsItem extends StatelessWidget {
         Positioned(
           right: 0,
           child: Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: AppColors.lightBackground,
               shape: BoxShape.circle,
             ),
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
+            child: const Padding(
+              padding: EdgeInsets.all(8.0),
               child: Icon(
                 Icons.favorite_border,
                 color: AppColors.lightIcon,

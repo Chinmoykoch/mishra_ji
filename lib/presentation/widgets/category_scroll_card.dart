@@ -9,7 +9,7 @@ class CategoryScrollCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(8),
+      margin: const EdgeInsets.all(8),
       decoration: BoxDecoration(
         border: Border.all(
           color: Colors.grey.shade300,

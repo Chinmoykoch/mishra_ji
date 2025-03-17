@@ -40,6 +40,8 @@ class Orders extends StatelessWidget {
     },
   ];
 
+  Orders({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,8 +50,8 @@ class Orders extends StatelessWidget {
         backgroundColor: Colors.white,
         elevation: 0,
         automaticallyImplyLeading: false,
-        leading: Padding(
-          padding: const EdgeInsets.only(left: 16),
+        leading: const Padding(
+          padding: EdgeInsets.only(left: 16),
           child: PrevBtn(),
         ),
         title: const Text(

@@ -5,7 +5,7 @@ class ProfileNavs extends StatelessWidget{
   String mainTitle;
   String description;
 
-  ProfileNavs({
+  ProfileNavs({super.key, 
     required this.mainTitle,
     required this.description,
   });
@@ -14,7 +14,7 @@ class ProfileNavs extends StatelessWidget{
   Widget build(BuildContext context) {
     // TODO: implement build
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 15),
+      padding: const EdgeInsets.symmetric(vertical: 15),
       child: Row(
         children: [
           Column(
@@ -24,8 +24,8 @@ class ProfileNavs extends StatelessWidget{
               Text(description),
             ],
           ),
-          Spacer(),
-          Icon(Icons.chevron_right, color: Colors.grey, size: 35,)
+          const Spacer(),
+          const Icon(Icons.chevron_right, color: Colors.grey, size: 35,)
         ],
       ),
     );
